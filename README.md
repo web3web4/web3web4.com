@@ -1,85 +1,64 @@
-# 🌐 Web3Web4
+# Web3Web4 Website
 
-> 🚀 Building the decentralized and intelligent internet
+Official website for **Web3Web4** - a software development house specializing in blockchain and AI solutions.
 
----
-
-## 👋 About Us
-
-**Web3Web4** is a software development house specializing in blockchain technologies and AI-powered applications. We build production-ready solutions at the intersection of decentralization and intelligence.
+🌐 **Live**: [web3web4.com](https://web3web4.com)  
+ℹ️ **About Web3Web4**: See our [GitHub Profile](https://github.com/web3web4)
 
 ---
 
-## 🛠️ What We're Ready to Build
+## Tech Stack
 
-### 🔗 Web3 (Blockchain & Decentralization)
-- 📜 Smart contracts and on-chain protocols
-- 🏢 Real World Asset (RWA) tokenization
-- 🎨 NFT platforms and marketplaces
-- 🗳️ DAOs and governance systems
-- 👛 Wallet integrations and dApps
-- ➕ And more...
-
-### 🤖 Web4 (AI & Intelligent Systems)
-- 🤝 AI agents for workflow automation
-- 🧠 Machine learning model integration
-- 🔬 Open-source LLM training and fine-tuning
-- ➕ And more...
+- **Framework**: React 19
+- **Router**: React Router v7
+- **Styling**: TailwindCSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Hosting**: GitHub Pages
+- **Build Tool**: Create React App (CRACO)
 
 ---
 
-## 💻 Technology Stack
+## Development
 
-| Category | Technologies |
-|----------|-------------|
-| **⛓️ Blockchain** | EVM, Solidity, Hardhat; also NEAR Protocol and Telegram Open Network (TON), and ready to support others as needed |
-| **🧠 AI/ML** | Ollama, OpenAI & Gemini APIs (and others depending on the case) |
-| **⚙️ Backend** | Node.js and its ecosystem |
-| **🎨 Frontend** | React, Next.js, TypeScript, ethers.js, wagmi |
+```bash
+# Install dependencies
+yarn install
 
----
+# Start local dev server
+yarn start
 
-## ✨ Our Approach
+# Build for production
+yarn build
 
-- 🌍 **Open Source**: We believe in transparent, community-driven development
-- 🔮 **Cutting Edge**: Constantly exploring emerging technologies and standards
-- 🏆 **Production Ready**: Enterprise-grade code, documentation, and support
-
----
-
-## 🤝 Work With Us
-
-We collaborate with startups, enterprises, and protocols to bring Web3 and AI visions to life.
-
-### 📋 Services
-- ⚡ Custom blockchain development
-- 🔒 Smart contract auditing
-- 🤖 AI integration and automation
-- 💡 Technical consulting and architecture
-- 🪙 Protocol design and tokenomics
+# Deploy to GitHub Pages
+yarn deploy
+```
 
 ---
 
-## 📬 Connect
+## Environment Variables
 
-- 🌐 **Website**: [web3web4.com](https://web3web4.com)
+Contact form integration requires EmailJS configuration. Copy `.env.example` to `.env.local`:
 
-<!---
-- 📧 **Email**: hello@web3web4.com
-- 🐦 **Twitter**: [@web3web4](https://twitter.com/web3web4)
-- 💼 **LinkedIn**: [web3web4](https://linkedin.com/company/web3web4)
---->
+```bash
+REACT_APP_CONTACT_EMAIL=contact-email@web3web4.com
+REACT_APP_EMAILJS_SERVICE_ID=web3web4-service-id
+REACT_APP_EMAILJS_TEMPLATE_ID=web3web4-template-id
+REACT_APP_EMAILJS_PUBLIC_KEY=web3web4-public-key
+```
 
----
-
-## 📦 Projects
-
-Explore our repositories to see what we're building. Contributions and feedback are welcome! 🙌
+For GitHub Actions deployment, configure these as **environment variables** in Settings > Environments > github-pages.
 
 ---
 
-<div align="center">
+## Deployment
 
-### 💫 *Bridging decentralization and intelligence, one commit at a time* 💫
+The site auto-deploys to GitHub Pages on every push to `main` via GitHub Actions. The deployment is accessible at:
+- Custom domain: [`web3web4.com`](https://web3web4.com)  
+- GitHub Pages: [`web3web4.github.io/web3web4.com`](https://web3web4.github.io/web3web4.com)
 
-</div>
+---
+
+## License
+
+© 2026 Web3Web4. All rights reserved.
