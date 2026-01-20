@@ -1,6 +1,6 @@
 import React from 'react';
 import { navLinks, socialLinks } from '../../data/mock';
-import { Globe, ArrowUpRight } from 'lucide-react';
+import { Github, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -46,12 +46,12 @@ const Footer = () => {
           <div>
             <h4 className="font-pixel text-white text-sm mb-6">CONNECT</h4>
             <a
-              href={socialLinks.website}
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-4 py-3 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] hover:bg-[#00FFD1] hover:text-black transition-all duration-300 group"
             >
-              <Globe className="w-5 h-5" />
+              <Github className="w-5 h-5" />
               <span className="text-sm font-medium">https://github.com/web3web4</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>

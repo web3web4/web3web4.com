@@ -57,5 +57,7 @@ export const navLinks = [
 ];
 
 export const socialLinks = {
-  website: "https://web3web4.com"
+  website: "https://web3web4.com",
+  github: "https://github.com/web3web4",
+  email: process.env.REACT_APP_CONTACT_EMAIL || "hello@web3web4.com",
 };

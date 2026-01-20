@@ -10,9 +10,14 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 
 function App() {
+  // Dynamically set basename based on hostname for dual-path support
+  const basename = window.location.hostname === 'web3web4.github.io' 
+    ? '/web3web4.com' 
+    : '';
+
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>

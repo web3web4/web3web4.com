@@ -5,6 +5,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { ArrowRight, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import { socialLinks } from '../../data/mock';
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +40,7 @@ const ContactSection = () => {
 
     setSubmitting(true);
 
-    const toEmail = 'maltabba@conx3.com';
+    const toEmail = socialLinks.email;
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
