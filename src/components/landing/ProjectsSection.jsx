@@ -95,7 +95,7 @@ const ProjectsSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Content */}
           <div
             className={`transform transition-all duration-1000 ${
@@ -156,9 +156,9 @@ const ProjectsSection = () => {
                     name="tacosec-backend" 
                     url="https://github.com/web3web4/tacosec-backend" 
                   />
-                  <div className="mt-6 pt-4 border-t border-white/10">
+                  <div className="mt-6 pt-5 border-t border-white/10">
                     <span className="text-white/40">$</span>
-                    <span className="text-white ml-2">git clone web3web4/tacosec-frontend</span>
+                    <span className="text-white ml-2">git clone https://github.com/web3web4/tacosec-frontend.git</span>
                     <span className="animate-pulse text-[#00FFD1] ml-1">|</span>
                   </div>
                 </div>

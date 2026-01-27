@@ -10,11 +10,22 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 bg-[#00FFD1] flex flex-col items-center justify-center">
-                <span className="font-pixel text-black text-[15px] font-bold leading-tight">W3</span>
-                <span className="font-pixel text-black text-[15px] font-bold leading-tight">W4</span>
+              <div className="w-12 h-12 bg-[#00FFD1] flex flex-col items-center justify-center 
+                transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,209,0.5)]"
+                style={{
+                  letterSpacing: '0.25em',
+                  paddingLeft: '0.25em',
+                }}>
+                <span className="font-pixel text-black text-xl font-bold leading-tight"
+                style={{
+                  lineHeight: '1em',
+                }}>W3</span>
+                <span className="font-pixel text-black text-xl font-bold leading-tight"
+                style={{
+                  lineHeight: '1em',
+                }}>W4</span>
               </div>
-              <span className="font-pixel text-white text-sm">WEB3WEB4</span>
+              <span className="font-pixel text-white text-sm">Web3Web4</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               Building the decentralized and intelligent internet. 

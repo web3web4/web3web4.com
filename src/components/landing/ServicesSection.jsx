@@ -64,7 +64,7 @@ const ServicesSection = () => {
             WHAT WE BUILD
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white">
-            Our Expertise
+            Our Capabilities
           </h2>
         </div>
 

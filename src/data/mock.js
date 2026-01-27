@@ -13,19 +13,18 @@ export const aboutData = {
 };
 
 export const web3Services = [
-  { icon: "FileCode", title: "Smart Contracts", description: "Smart contracts and on-chain protocols" },
-  { icon: "Building2", title: "RWA Tokenization", description: "Real World Asset tokenization" },
-  { icon: "Palette", title: "NFT Platforms", description: "NFT platforms and marketplaces" },
-  { icon: "Vote", title: "DAOs & Governance", description: "DAOs and governance systems" },
-  { icon: "Wallet", title: "Wallet Integration", description: "Wallet integrations and dApps" },
-  { icon: "Plus", title: "And More", description: "Custom blockchain solutions" }
+  { icon: "Palette", title: "NFT Platforms", description: "We build NFT platforms and marketplaces" },
+  { icon: "Building2", title: "RWA Tokenization", description: "We build Real World Asset tokenization platforms" },
+  { icon: "Vote", title: "DAOs & Governance", description: "We build DAOs and governance systems" },
+  { icon: "Coins", title: "Token Gamification", description: "We build token-based gamification systems" },
+  { icon: "Wallet", title: "Custom dApps", description: "We build custom dApps and Web3 developer tooling" }
 ];
 
 export const web4Services = [
-  { icon: "Bot", title: "AI Agents", description: "AI agents for workflow automation" },
-  { icon: "Brain", title: "ML Integration", description: "Machine learning model integration" },
-  { icon: "Sparkles", title: "LLM Training", description: "Open-source LLM training and fine-tuning" },
-  { icon: "Plus", title: "And More", description: "Custom AI solutions" }
+  { icon: "Eye", title: "Multi-Modal Analysis", description: "We build multi-modal text & vision analysis systems" },
+  { icon: "Sparkles", title: "AI Content Generation", description: "We build AI-powered content generation tools" },
+  { icon: "Target", title: "Decision Support", description: "We build AI-powered decision support systems" },
+  { icon: "Bot", title: "AI Agents", description: "We build AI agents for workflow automation" }
 ];
 
 export const techStack = [
