@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3Web4 - Monospace Font Comparison</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Fira+Code:wght@400;700&family=Source+Code+Pro:wght@400;700&family=IBM+Plex+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@400;700&family=Courier+Prime:wght@400;700&family=Anonymous+Pro:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Cascadia Code from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .font-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .font-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+        }
+        
+        .font-name {
+            font-size: 0.9rem;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .logo-sample {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+        
+        .slogan-sample {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #b0b0b0;
+            font-style: italic;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+            margin: 1.5rem 0;
+        }
+        
+        .notes {
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+        
+        .notes h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notes p {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+        
+        /* Individual font families */
+        .cascadia { font-family: 'Cascadia Code', monospace; }
+        .jetbrains { font-family: 'JetBrains Mono', monospace; }
+        .fira { font-family: 'Fira Code', monospace; }
+        .source { font-family: 'Source Code Pro', monospace; }
+        .ibm { font-family: 'IBM Plex Mono', monospace; }
+        .space { font-family: 'Space Mono', monospace; }
+        .roboto { font-family: 'Roboto Mono', monospace; }
+        .courier { font-family: 'Courier Prime', monospace; }
+        .anonymous { font-family: 'Anonymous Pro', monospace; }
+        .ubuntu { font-family: 'Ubuntu Mono', monospace; }
+        
+        @media (max-width: 768px) {
+            .logo-sample {
+                font-size: 2rem;
+            }
+            .slogan-sample {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web3Web4 Font Showcase</h1>
+        <p class="subtitle">Compare monospace fonts for your logo and slogan</p>
+        
+        <!-- Cascadia Code -->
+        <div class="font-card">
+            <div class="font-name">Cascadia Code ⭐ Recommended</div>
+            <div class="logo-sample cascadia">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample cascadia">Bridging the Standards</div>
+        </div>
+        
+        <!-- JetBrains Mono -->
+        <div class="font-card">
+            <div class="font-name">JetBrains Mono</div>
+            <div class="logo-sample jetbrains">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample jetbrains">Bridging the Standards</div>
+        </div>
+        
+        <!-- Fira Code -->
+        <div class="font-card">
+            <div class="font-name">Fira Code</div>
+            <div class="logo-sample fira">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample fira">Bridging the Standards</div>
+        </div>
+        
+        <!-- Source Code Pro -->
+        <div class="font-card">
+            <div class="font-name">Source Code Pro</div>
+            <div class="logo-sample source">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample source">Bridging the Standards</div>
+        </div>
+        
+        <!-- IBM Plex Mono -->
+        <div class="font-card">
+            <div class="font-name">IBM Plex Mono</div>
+            <div class="logo-sample ibm">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample ibm">Bridging the Standards</div>
+        </div>
+        
+        <!-- Space Mono -->
+        <div class="font-card">
+            <div class="font-name">Space Mono</div>
+            <div class="logo-sample space">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample space">Bridging the Standards</div>
+        </div>
+        
+        <!-- Roboto Mono -->
+        <div class="font-card">
+            <div class="font-name">Roboto Mono</div>
+            <div class="logo-sample roboto">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample roboto">Bridging the Standards</div>
+        </div>
+        
+        <!-- Courier Prime -->
+        <div class="font-card">
+            <div class="font-name">Courier Prime</div>
+            <div class="logo-sample courier">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample courier">Bridging the Standards</div>
+        </div>
+        
+        <!-- Anonymous Pro -->
+        <div class="font-card">
+            <div class="font-name">Anonymous Pro</div>
+            <div class="logo-sample anonymous">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample anonymous">Bridging the Standards</div>
+        </div>
+        
+        <!-- Ubuntu Mono -->
+        <div class="font-card">
+            <div class="font-name">Ubuntu Mono</div>
+            <div class="logo-sample ubuntu">Web3Web4</div>
+            <div class="divider"></div>
+            <div class="slogan-sample ubuntu">Bridging the Standards</div>
+        </div>
+        
+        <div class="notes">
+            <h3>💡 Font Selection Tips</h3>
+            <p>
+                • <strong>Cascadia Code</strong> (Microsoft) - Modern, professional, optimized for developer tools<br>
+                • <strong>JetBrains Mono</strong> and <strong>Fira Code</strong> offer modern, clean aesthetics<br>
+                • <strong>IBM Plex Mono</strong> provides a professional, corporate feel<br>
+                • <strong>Space Mono</strong> gives a futuristic, tech-forward vibe<br>
+                • <strong>Source Code Pro</strong> is highly readable and versatile<br>
+                • Consider how the font looks at different sizes and on various backgrounds
+            </p>
+        </div>
+    </div>
+</body>
+</html>
