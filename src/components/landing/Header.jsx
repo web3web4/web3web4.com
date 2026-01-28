@@ -33,20 +33,10 @@ const Header = () => {
           <a href="#" className="flex items-center gap-3 group relative">
             <div className="relative">
               <div className="absolute inset-0 bg-[#00FFD1] blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-              <div className="relative w-12 h-12 bg-[#00FFD1] flex flex-col items-center justify-center 
-                transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,209,0.5)]"
-                style={{
-                  letterSpacing: '0.25em',
-                  paddingLeft: '0.25em',
-                }}>
-                <span className="font-pixel text-black text-xl font-bold leading-tight"
-                style={{
-                  lineHeight: '1em',
-                }}>W3</span>
-                <span className="font-pixel text-black text-xl font-bold leading-tight"
-                style={{
-                  lineHeight: '1em',
-                }}>W4</span>
+              <div className="relative w-12 h-12 font-logo bg-[#00FFD1] flex flex-col items-center justify-center 
+                transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,209,0.5)]">
+                <span><span className="wide-w">W</span>3</span>
+                <span><span className="wide-w">W</span>4</span>
               </div>
             </div>
             <span className="font-pixel text-white text-sm hidden sm:block group-hover:text-[#00FFD1] transition-colors duration-300">Web3Web4</span>

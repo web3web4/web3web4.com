@@ -15,7 +15,6 @@ export const aboutData = {
 export const web3Services = [
   { icon: "Palette", title: "NFT Platforms", description: "We build NFT platforms and marketplaces" },
   { icon: "Building2", title: "RWA Tokenization", description: "We build Real World Asset tokenization platforms" },
-  { icon: "Vote", title: "DAOs & Governance", description: "We build DAOs and governance systems" },
   { icon: "Coins", title: "Token Gamification", description: "We build token-based gamification systems" },
   { icon: "Wallet", title: "Custom dApps", description: "We build custom dApps and Web3 developer tooling" }
 ];
@@ -28,24 +27,31 @@ export const web4Services = [
 ];
 
 export const techStack = [
-  { category: "Blockchain", icon: "Link", technologies: "EVM, Solidity, Hardhat, NEAR Protocol, TON" },
-  { category: "AI/ML", icon: "Brain", technologies: "Ollama, OpenAI, Gemini APIs" },
-  { category: "Backend", icon: "Server", technologies: "Node.js and its ecosystem" },
+  { category: "Blockchain", icon: "Link", technologies: "EVM, Solidity, Hardhat, TON, NEAR Protocol" },
+  { category: "AI/ML", icon: "Brain", technologies: "OpenAI, Google Gemini, Anthropic Claude, Ollama" },
+  { category: "Backend", icon: "Server", technologies: "Node.js, TypeScript, Express, Next.js API routes" },
   { category: "Frontend", icon: "Monitor", technologies: "React, Next.js, TypeScript, ethers.js, wagmi" }
 ];
 
 export const approachItems = [
-  { icon: "Globe", title: "Open Source", description: "We believe in transparent, community-driven development" },
   { icon: "Zap", title: "Cutting Edge", description: "Constantly exploring emerging technologies and standards" },
-  { icon: "Trophy", title: "Production Ready", description: "Enterprise-grade code, documentation, and support" }
+  { icon: "Trophy", title: "Production Ready", description: "Enterprise-grade code, documentation, and support" },  
+  { icon: "Award", title: "Quality First", description: "Clean, well-documented code built with industry best practices and rigorous testing" },
+  { icon: "Blocks", title: "Built for Growth", description: "Scalable architecture designed for extensibility and future feature additions" },
+  { icon: "GitBranch", title: "Transparent Collaboration", description: "You get direct code repository access to monitor development progress in real-time" },
+  { icon: "Brain", title: "Creative Engineering", description: "Innovative solutions overcoming limitations, like orchestrating multiple AI providers to increase accuracy" }
 ];
 
 export const servicesData = [
-  { icon: "Zap", title: "Custom Blockchain Development", description: "End-to-end blockchain solutions tailored to your needs" },
-  { icon: "Shield", title: "Smart Contract Auditing", description: "Comprehensive security audits for your smart contracts" },
-  { icon: "Bot", title: "AI Integration & Automation", description: "Intelligent systems to automate your workflows" },
-  { icon: "Lightbulb", title: "Technical Consulting", description: "Expert guidance on architecture and design" },
-  { icon: "Coins", title: "Protocol Design & Tokenomics", description: "Strategic token economics and protocol design" }
+  // Web3 Services
+  { icon: "Code2", title: "Web3 Development", description: "End-to-end blockchain solutions: smart contracts, dApps, NFTs, RWA tokenization, and DAOs" },
+  { icon: "Shield", title: "Smart Contract Auditing", description: "Comprehensive security audits and security-first development for your protocols" },
+  { icon: "Lightbulb", title: "Technical Consulting", description: "Guidance on architecture, protocol design, tokenomics, and implementation strategy" },
+  
+  // AI Services - Progression: Build → Integrate → Optimize
+  { icon: "Bot", title: "AI Solutions", description: "Building AI systems from the ground up with multi-provider orchestration and intelligent automation" },
+  { icon: "Sparkles", title: "LLM Integration", description: "Integrate AI capabilities into your existing systems with top tier models or custom model fine-tuning" },
+  { icon: "Zap", title: "Prompt Engineering", description: "Fine-tune and optimize your existing AI solutions for peak performance and accuracy" },
 ];
 
 export const navLinks = [

@@ -93,12 +93,12 @@ const AboutSection = () => {
             </p>
             <div className="flex gap-8">
               <div className="text-center">
-                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">WEB3</div>
+                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">Web3</div>
                 <p className="text-white/50 text-sm">Blockchain</p>
               </div>
               <div className="w-px bg-white/20" />
               <div className="text-center">
-                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">WEB4</div>
+                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">Web4</div>
                 <p className="text-white/50 text-sm">AI Systems</p>
               </div>
             </div>

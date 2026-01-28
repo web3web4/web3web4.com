@@ -6,8 +6,27 @@
 .font-pixel {
   /* font-family: 'Press Start 2P', cursive; */
   /* Experimenting with the coding font. TODO: if selecttion was finalized update the css class name */
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-weight: bold;
+}
+
+.font-logo {
+  font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  padding-left: 0.47em;
+  line-height: 1em;
+  font-size: 1.25rem;
+  -webkit-text-stroke: 0.060em black;
+  paint-order: stroke fill;
+  font-synthesis: weight;
+}
+
+.wide-w {
+  display: inline-block;
+  transform: scaleX(1.5);
+  -webkit-text-stroke: 0.0em black !important;
 }
 
 .font-body {

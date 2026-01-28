@@ -303,9 +303,9 @@ const HeroSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <span className="block">WEB3</span>
+            <span className="block">Web3</span>
             <span className="text-[#00FFD1] relative">
-              WEB4
+              Web4
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#00FFD1] animate-pulse" />
             </span>
           </h1>

@@ -78,10 +78,10 @@ const ServicesSection = () => {
             <div className="w-10 h-10 bg-[#00FFD1] flex items-center justify-center">
               <LucideIcons.Link className="w-5 h-5 text-black" />
             </div>
-            <h3 className="font-pixel text-2xl text-white">WEB3</h3>
+            <h3 className="font-pixel text-2xl text-white">Web3</h3>
             <span className="text-white/40 text-sm">Blockchain & Decentralization</span>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {web3Services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -103,7 +103,7 @@ const ServicesSection = () => {
             <div className="w-10 h-10 bg-[#00FFD1] flex items-center justify-center">
               <LucideIcons.Brain className="w-5 h-5 text-black" />
             </div>
-            <h3 className="font-pixel text-2xl text-white">WEB4</h3>
+            <h3 className="font-pixel text-2xl text-white">Web4</h3>
             <span className="text-white/40 text-sm">AI & Intelligent Systems</span>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

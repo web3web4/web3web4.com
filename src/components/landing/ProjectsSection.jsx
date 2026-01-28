@@ -152,10 +152,9 @@ const ProjectsSection = () => {
                     name="tacosec-frontend" 
                     url="https://github.com/web3web4/tacosec-frontend" 
                   />
-                  <ProjectLink 
-                    name="tacosec-backend" 
-                    url="https://github.com/web3web4/tacosec-backend" 
-                  />
+                  <div className="mt-4 text-white/40 text-sm italic">
+                    More to be shared soon...
+                  </div>
                   <div className="mt-6 pt-5 border-t border-white/10">
                     <span className="text-white/40">$</span>
                     <span className="text-white ml-2">git clone https://github.com/web3web4/tacosec-frontend.git</span>

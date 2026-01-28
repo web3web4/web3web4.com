@@ -36,7 +36,7 @@ const ApproachSection = () => {
           }`}
         >
           <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
-            OUR PHILOSOPHY
+            PHILOSOPHY
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white">
             Our Approach

@@ -181,7 +181,7 @@ const ContactSection = () => {
                   className="w-full bg-[#00FFD1] text-black hover:bg-[#00FFD1]/10 hover:text-[#00FFD1] px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <span className="flex items-center justify-center gap-3">
-                    {submitting ? 'Sending…' : 'Send Message'}
+                    {submitting ? 'Sending...' : 'Send Message'}
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
