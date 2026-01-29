@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/old-pixelated-font/static/css/main.ee6aa686.css",
-    "main.js": "/old-pixelated-font/static/js/main.630274e0.js",
+    "main.css": "/old-pixelated-font/static/css/main.13f0fbe8.css",
+    "main.js": "/old-pixelated-font/static/js/main.3dd00454.js",
     "static/media/inter-latin-ext-600-normal.woff": "/old-pixelated-font/static/media/inter-latin-ext-600-normal.4d0d5017d71ea1750fc1.woff",
     "static/media/inter-latin-ext-700-normal.woff": "/old-pixelated-font/static/media/inter-latin-ext-700-normal.d4a91814dd3f1e022ab1.woff",
     "static/media/inter-latin-ext-500-normal.woff": "/old-pixelated-font/static/media/inter-latin-ext-500-normal.2f93aaa35e870cec4704.woff",
@@ -69,11 +69,11 @@
     "static/media/press-start-2p-cyrillic-ext-400-normal.woff": "/old-pixelated-font/static/media/press-start-2p-cyrillic-ext-400-normal.b9199c0c4c2d23185303.woff",
     "static/media/press-start-2p-greek-400-normal.woff": "/old-pixelated-font/static/media/press-start-2p-greek-400-normal.b1c8973ae8a3ba03333a.woff",
     "index.html": "/old-pixelated-font/index.html",
-    "main.ee6aa686.css.map": "/old-pixelated-font/static/css/main.ee6aa686.css.map",
-    "main.630274e0.js.map": "/old-pixelated-font/static/js/main.630274e0.js.map"
+    "main.13f0fbe8.css.map": "/old-pixelated-font/static/css/main.13f0fbe8.css.map",
+    "main.3dd00454.js.map": "/old-pixelated-font/static/js/main.3dd00454.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee6aa686.css",
-    "static/js/main.630274e0.js"
+    "static/css/main.13f0fbe8.css",
+    "static/js/main.3dd00454.js"
   ]
 }
