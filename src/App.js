@@ -1,19 +1,18 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Toaster } from './components/ui/sonner';
-import LandingPage from './components/landing/LandingPage';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "./components/ui/sonner";
+import LandingPage from "./components/landing/LandingPage";
 
-import '@fontsource/press-start-2p';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
+import "@fontsource/press-start-2p";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 
 function App() {
-  // Dynamically set basename based on hostname for dual-path support
-  const basename = window.location.hostname === 'web3web4.github.io' 
-    ? '/web3web4.com' 
-    : '';
+  // Use PUBLIC_URL from build time for proper subdirectory routing
+  // process.env.PUBLIC_URL is set during build (e.g., "/" or "/feat-branch-name")
+  const basename = process.env.PUBLIC_URL || "";
 
   return (
     <div className="App">

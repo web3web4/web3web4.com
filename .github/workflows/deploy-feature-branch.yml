@@ -1,0 +1,87 @@
+name: Deploy Feature Branch to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "feat/**"
+      - "feature/**"
+      - "fix/**"
+      - "chore/**"
+      - "dev/**"
+      - "preview/**"
+      - "old/**"
+      # Add more branch patterns as needed
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages-preview
+      url: https://web3web4.com/${{ steps.deploy_path.outputs.sanitized }}/
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Sanitize branch name for URL path
+        id: deploy_path
+        run: |
+          # Get the branch name
+          BRANCH_NAME="${{ github.ref_name }}"
+
+          # Replace slashes and special characters with hyphens
+          # Convert to lowercase for consistency
+          SANITIZED=$(echo "$BRANCH_NAME" | sed 's/[\/:]/-/g' | tr '[:upper:]' '[:lower:]')
+
+          # Output the sanitized path
+          echo "sanitized=$SANITIZED" >> $GITHUB_OUTPUT
+          echo "original=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+          # Log for visibility
+          echo "📦 Original branch: $BRANCH_NAME"
+          echo "🔗 Deployment path: /$SANITIZED/"
+          echo "🌐 Will be available at: https://web3web4.com/$SANITIZED/"
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile # to ease publishing with cherry-pick incomplete commits while still under development
+
+      - name: Build
+        env:
+          REACT_APP_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          REACT_APP_EMAILJS_SERVICE_ID: ${{ vars.EMAILJS_SERVICE_ID }}
+          REACT_APP_EMAILJS_TEMPLATE_ID: ${{ vars.EMAILJS_TEMPLATE_ID }}
+          REACT_APP_EMAILJS_PUBLIC_KEY: ${{ vars.EMAILJS_PUBLIC_KEY }}
+          PUBLIC_URL: /${{ steps.deploy_path.outputs.sanitized }}
+        run: |
+          echo "🏗️ Building with PUBLIC_URL=/${{ steps.deploy_path.outputs.sanitized }}"
+          pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          destination_dir: ${{ steps.deploy_path.outputs.sanitized }}
+          keep_files: true # Keep other branch deployments
+          commit_message: "Deploy ${{ steps.deploy_path.outputs.original }} to /${{ steps.deploy_path.outputs.sanitized }}/"
+
+      - name: Deployment Summary
+        run: |
+          echo "✅ Deployment complete!"
+          echo ""
+          echo "Branch: ${{ steps.deploy_path.outputs.original }}"
+          echo "Deployed to: https://web3web4.com/${{ steps.deploy_path.outputs.sanitized }}/"
+          echo ""
+          echo "Note: It may take a few minutes for GitHub Pages to update."
