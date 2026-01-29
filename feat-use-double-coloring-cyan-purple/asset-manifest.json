@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/feat-use-double-coloring-cyan-purple/static/css/main.38be6f77.css",
-    "main.js": "/feat-use-double-coloring-cyan-purple/static/js/main.69a7ef47.js",
+    "main.js": "/feat-use-double-coloring-cyan-purple/static/js/main.7265c9bf.js",
     "static/media/inter-latin-ext-600-normal.woff": "/feat-use-double-coloring-cyan-purple/static/media/inter-latin-ext-600-normal.4d0d5017d71ea1750fc1.woff",
     "static/media/inter-latin-ext-700-normal.woff": "/feat-use-double-coloring-cyan-purple/static/media/inter-latin-ext-700-normal.d4a91814dd3f1e022ab1.woff",
     "static/media/inter-latin-ext-500-normal.woff": "/feat-use-double-coloring-cyan-purple/static/media/inter-latin-ext-500-normal.2f93aaa35e870cec4704.woff",
@@ -70,10 +70,10 @@
     "static/media/press-start-2p-greek-400-normal.woff": "/feat-use-double-coloring-cyan-purple/static/media/press-start-2p-greek-400-normal.b1c8973ae8a3ba03333a.woff",
     "index.html": "/feat-use-double-coloring-cyan-purple/index.html",
     "main.38be6f77.css.map": "/feat-use-double-coloring-cyan-purple/static/css/main.38be6f77.css.map",
-    "main.69a7ef47.js.map": "/feat-use-double-coloring-cyan-purple/static/js/main.69a7ef47.js.map"
+    "main.7265c9bf.js.map": "/feat-use-double-coloring-cyan-purple/static/js/main.7265c9bf.js.map"
   },
   "entrypoints": [
     "static/css/main.38be6f77.css",
-    "static/js/main.69a7ef47.js"
+    "static/js/main.7265c9bf.js"
   ]
 }
