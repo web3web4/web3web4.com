@@ -89,7 +89,7 @@ const ContactSection = () => {
       className="relative py-32 bg-[#0a0a0a] overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00FFD1]/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[150px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -99,7 +99,7 @@ const ContactSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
-            <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
               GET IN TOUCH
             </span>
             <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
@@ -113,8 +113,8 @@ const ContactSection = () => {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#00FFD1]/10 flex items-center justify-center">
-                  <span className="text-[#00FFD1] font-pixel text-sm">WWW</span>
+                <div className="w-12 h-12 bg-white/10 flex items-center justify-center">
+                  <span className="text-white font-pixel text-sm">WWW</span>
                 </div>
                 <div>
                   <p className="text-white/40 text-sm mb-1">Website</p>
@@ -122,7 +122,7 @@ const ContactSection = () => {
                     href="https://web3web4.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#00FFD1] hover:underline"
+                    className="text-white hover:underline"
                   >
                     web3web4.com
                   </a>
@@ -148,7 +148,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="John Doe"
                     required
-                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-[#00FFD1] transition-colors"
+                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-white transition-colors"
                   />
                 </div>
                 <div>
@@ -160,7 +160,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="john@example.com"
                     required
-                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-[#00FFD1] transition-colors"
+                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-white transition-colors"
                   />
                 </div>
                 <div>
@@ -172,13 +172,13 @@ const ContactSection = () => {
                     placeholder="Tell us about your project..."
                     required
                     rows={5}
-                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-[#00FFD1] transition-colors resize-none"
+                    className="bg-black/50 border-white/20 text-white placeholder:text-white/30 rounded-none focus:border-white transition-colors resize-none"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-[#00FFD1] text-black hover:bg-[#00FFD1]/10 hover:text-[#00FFD1] px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-white text-black hover:bg-white/10 hover:text-white border border-white px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <span className="flex items-center justify-center gap-3">
                     {submitting ? 'Sending...' : 'Send Message'}
@@ -188,10 +188,10 @@ const ContactSection = () => {
               </form>
 
               {/* Decorative Corners */}
-              <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-[#00FFD1]" />
-              <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-[#00FFD1]" />
-              <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-[#00FFD1]" />
-              <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-[#00FFD1]" />
+              <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-white" />
+              <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-white" />
+              <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-white" />
+              <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-white" />
             </div>
           </div>
         </div>

@@ -3,20 +3,26 @@ import { web3Services, web4Services } from '../../data/mock';
 import { Card } from '../ui/card';
 import * as LucideIcons from 'lucide-react';
 
-const ServiceCard = ({ service, index, isVisible }) => {
+const ServiceCard = ({ service, index, isVisible, pillarColor = 'var(--web3-cyan)' }) => {
   const IconComponent = LucideIcons[service.icon] || LucideIcons.Circle;
 
   return (
     <Card
-      className={`group bg-[#121212] border border-white/10 hover:border-[#00FFD1]/50 p-6 transition-all duration-500 cursor-pointer transform ${
+      className={`group bg-[#121212] border border-white/10 hover:border-white/30 p-6 transition-all duration-500 cursor-pointer transform ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="w-12 h-12 bg-[#00FFD1]/10 flex items-center justify-center mb-4 group-hover:bg-[#00FFD1]/20 transition-colors duration-300">
-        <IconComponent className="w-6 h-6 text-[#00FFD1]" />
+      <div 
+        className="w-12 h-12 flex items-center justify-center mb-4 transition-colors duration-300"
+        style={{ 
+          backgroundColor: `color-mix(in srgb, ${pillarColor} 10%, transparent)`,
+          border: `1px solid color-mix(in srgb, ${pillarColor} 30%, transparent)`
+        }}
+      >
+        <IconComponent className="w-6 h-6" style={{ color: pillarColor }} />
       </div>
-      <h3 className="text-white text-lg font-semibold mb-2 group-hover:text-[#00FFD1] transition-colors duration-300">
+      <h3 className="text-white text-lg font-semibold mb-2 transition-colors duration-300">
         {service.title}
       </h3>
       <p className="text-white/60 text-sm leading-relaxed">
@@ -60,7 +66,7 @@ const ServicesSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
             WHAT WE BUILD
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white">
@@ -75,10 +81,10 @@ const ServicesSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
-            <div className="w-10 h-10 bg-[#00FFD1] flex items-center justify-center">
+            <div className="w-10 h-10 bg-[var(--web3-cyan)] flex items-center justify-center">
               <LucideIcons.Link className="w-5 h-5 text-black" />
             </div>
-            <h3 className="font-pixel text-2xl text-white">Web3</h3>
+            <h3 className="font-pixel text-2xl text-[var(--web3-cyan)]">Web3</h3>
             <span className="text-white/40 text-sm">Blockchain & Decentralization</span>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -88,6 +94,7 @@ const ServicesSection = () => {
                 service={service}
                 index={index}
                 isVisible={isVisible}
+                pillarColor="var(--web3-cyan)"
               />
             ))}
           </div>
@@ -100,10 +107,10 @@ const ServicesSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
-            <div className="w-10 h-10 bg-[#00FFD1] flex items-center justify-center">
+            <div className="w-10 h-10 bg-[var(--web4-purple)] flex items-center justify-center">
               <LucideIcons.Brain className="w-5 h-5 text-black" />
             </div>
-            <h3 className="font-pixel text-2xl text-white">Web4</h3>
+            <h3 className="font-pixel text-2xl text-[var(--web4-purple)]">Web4</h3>
             <span className="text-white/40 text-sm">AI & Intelligent Systems</span>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -113,6 +120,7 @@ const ServicesSection = () => {
                 service={service}
                 index={index}
                 isVisible={isVisible}
+                pillarColor="var(--web4-purple)"
               />
             ))}
           </div>

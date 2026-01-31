@@ -262,8 +262,8 @@ const HeroSection = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 209, 0.4) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 209, 0.4) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px',
           }}
@@ -271,8 +271,8 @@ const HeroSection = () => {
       </div>
 
       {/* Center Glow Effect - Subtle */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00FFD1]/[0.03] rounded-full blur-[120px]" />
-      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#00FFD1]/[0.02] rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px]" />
+      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-white/[0.015] rounded-full blur-[100px]" />
 
       {/* Blockchain Network Animation */}
       <BlockchainNetwork />
@@ -292,7 +292,7 @@ const HeroSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6 backdrop-blur-sm">
+            <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6 backdrop-blur-sm">
               {heroData.tagline}
             </span>
           </div>
@@ -303,10 +303,17 @@ const HeroSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <span className="block">Web3</span>
-            <span className="text-[#00FFD1] relative">
-              Web4
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#00FFD1] animate-pulse" />
+            <span className="block text-[var(--web3-cyan)]">Web3</span>
+            <span className="text-[var(--web4-purple)] relative">
+              Web4              
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-white animate-pulse" />
+              {/* can alternatively use the following to create a gradient */}
+              {/* <span 
+                className="absolute -bottom-2 left-0 w-full h-1  animate-pulse" 
+                style={{
+                  background: 'linear-gradient(90deg, var(--web3-cyan) 0%, var(--web4-purple) 70%)'
+                }}
+              />       */}
             </span>
           </h1>
 
@@ -335,7 +342,7 @@ const HeroSection = () => {
             }`}
           >
             <Button
-              className="bg-[#00FFD1] text-black hover:bg-[#00FFD1]/10 hover:text-[#00FFD1] px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
+              className="bg-white text-black hover:bg-white/10 hover:text-white border border-white px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
               asChild
             >
               <a href="#services" className="flex items-center gap-2">
@@ -356,13 +363,13 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-[#00FFD1]/50" />
+        <ChevronDown className="w-8 h-8 text-white/50" />
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-20 h-20 border border-[#00FFD1]/20 animate-spin-slow" />
-      <div className="absolute bottom-40 right-20 w-10 h-10 bg-[#00FFD1]/10" />
-      <div className="absolute top-40 left-10 w-6 h-6 bg-[#00FFD1]/20 animate-pulse" />
+      <div className="absolute top-20 right-10 w-20 h-20 border border-white/10 animate-spin-slow" />
+      <div className="absolute bottom-40 right-20 w-10 h-10 bg-white/5" />
+      <div className="absolute top-40 left-10 w-6 h-6 bg-white/10 animate-pulse" />
     </section>
   );
 };

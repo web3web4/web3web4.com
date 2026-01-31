@@ -26,6 +26,12 @@ const WorkWithUsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Determine color based on service index
+  // First 3 are Web3 (0, 1, 2), last 3 are Web4 (3, 4, 5)
+  const getPillarColor = (index) => {
+    return index < 3 ? 'var(--web3-cyan)' : 'var(--web4-purple)';
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -38,7 +44,7 @@ const WorkWithUsSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
             COLLABORATION
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
@@ -53,20 +59,34 @@ const WorkWithUsSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {servicesData.map((service, index) => {
             const IconComponent = LucideIcons[service.icon] || LucideIcons.Circle;
+            const pillarColor = getPillarColor(index);
+            
             return (
               <Card
                 key={service.title}
-                className={`group bg-[#121212] border border-white/10 hover:border-[#00FFD1]/50 p-6 transition-all duration-500 transform ${
+                className={`group relative bg-[#121212] border border-white/10 hover:border-white/30 p-6 transition-all duration-500 transform ${
                   isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#00FFD1]/10 flex-shrink-0 flex items-center justify-center group-hover:bg-[#00FFD1] transition-colors duration-300">
-                    <IconComponent className="w-6 h-6 text-[#00FFD1] group-hover:text-black transition-colors duration-300" />
+                  <div 
+                    className="w-12 h-12 flex-shrink-0 flex items-center justify-center transition-colors duration-300"
+                    style={{ 
+                      backgroundColor: `color-mix(in srgb, ${pillarColor} 10%, transparent)`,
+                      border: `1px solid color-mix(in srgb, ${pillarColor} 30%, transparent)`
+                    }}
+                  >
+                    <IconComponent 
+                      className="w-6 h-6 transition-colors duration-300" 
+                      style={{ color: pillarColor }}
+                    />
                   </div>
                   <div>
-                    <h3 className="text-white text-lg font-semibold mb-2 group-hover:text-[#00FFD1] transition-colors duration-300">
+                    <h3 
+                      className="text-lg font-semibold mb-2 transition-colors duration-300"
+                      style={{ color: pillarColor }}
+                    >
                       {service.title}
                     </h3>
                     <p className="text-white/60 text-sm leading-relaxed">
@@ -86,7 +106,7 @@ const WorkWithUsSection = () => {
           }`}
         >
           <Button
-            className="bg-[#00FFD1] text-black hover:bg-[#00FFD1]/10 hover:text-[#00FFD1] px-10 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
+            className="bg-white text-black hover:bg-white/10 hover:text-white border border-white px-10 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
             asChild
           >
             <a href="#contact" className="flex items-center gap-3">
