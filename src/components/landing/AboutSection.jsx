@@ -35,8 +35,8 @@ const AboutSection = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 209, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 209, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
             `,
             backgroundSize: '80px 80px',
           }}
@@ -55,24 +55,24 @@ const AboutSection = () => {
               {/* Main Box */}
               <div className="relative bg-[#121212] border border-white/10 p-12">
                 <div className="flex items-center justify-center gap-8">
-                  <div className="w-24 h-24 bg-[#00FFD1]/10 flex items-center justify-center border border-[#00FFD1]/30">
-                    <Code2 className="w-12 h-12 text-[#00FFD1]" />
+                  <div className="w-24 h-24 bg-[var(--web3-cyan)]/10 flex items-center justify-center border border-[var(--web3-cyan)]/30">
+                    <Code2 className="w-12 h-12 text-[var(--web3-cyan)]" />
                   </div>
                   <div className="text-4xl text-white/20">+</div>
-                  <div className="w-24 h-24 bg-[#00FFD1]/10 flex items-center justify-center border border-[#00FFD1]/30">
-                    <Cpu className="w-12 h-12 text-[#00FFD1]" />
+                  <div className="w-24 h-24 bg-[var(--web4-purple)]/10 flex items-center justify-center border border-[var(--web4-purple)]/30">
+                    <Cpu className="w-12 h-12 text-[var(--web4-purple)]" />
                   </div>
                 </div>
-                <p className="text-center text-[#00FFD1] font-pixel text-sm mt-8">
+                <p className="text-center text-white font-pixel text-sm mt-8">
                   BLOCKCHAIN + AI
                 </p>
               </div>
 
               {/* Decorative Corners */}
-              <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-[#00FFD1]" />
-              <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-[#00FFD1]" />
-              <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-[#00FFD1]" />
-              <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-[#00FFD1]" />
+              <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-white/30" />
+              <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-white/30" />
+              <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-white/30" />
+              <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-white/30" />
             </div>
           </div>
 
@@ -82,7 +82,7 @@ const AboutSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
-            <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
               WHO WE ARE
             </span>
             <h2 className="font-pixel text-3xl sm:text-4xl text-white mb-6">
@@ -93,12 +93,12 @@ const AboutSection = () => {
             </p>
             <div className="flex gap-8">
               <div className="text-center">
-                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">Web3</div>
+                <div className="font-pixel text-3xl text-[var(--web3-cyan)] mb-2">Web3</div>
                 <p className="text-white/50 text-sm">Blockchain</p>
               </div>
               <div className="w-px bg-white/20" />
               <div className="text-center">
-                <div className="font-pixel text-3xl text-[#00FFD1] mb-2">Web4</div>
+                <div className="font-pixel text-3xl text-[var(--web4-purple)] mb-2">Web4</div>
                 <p className="text-white/50 text-sm">AI Systems</p>
               </div>
             </div>

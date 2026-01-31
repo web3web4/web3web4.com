@@ -23,6 +23,17 @@ const TechStackSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Map tech categories to their pillar colors
+  const getPillarColor = (category) => {
+    const colorMap = {
+      'Blockchain': 'var(--web3-cyan)',
+      'AI/ML': 'var(--web4-purple)',
+      'Backend': '#FFFFFF',
+      'Frontend': '#FFFFFF'
+    };
+    return colorMap[category] || '#FFFFFF';
+  };
+
   return (
     <section
       id="tech"
@@ -37,8 +48,8 @@ const TechStackSection = () => {
             backgroundImage: `
               repeating-linear-gradient(
                 45deg,
-                #00FFD1 0px,
-                #00FFD1 1px,
+                #FFFFFF 0px,
+                #FFFFFF 1px,
                 transparent 1px,
                 transparent 20px
               )
@@ -54,7 +65,7 @@ const TechStackSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
             TECHNOLOGY
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white">
@@ -66,21 +77,35 @@ const TechStackSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {techStack.map((tech, index) => {
             const IconComponent = LucideIcons[tech.icon] || LucideIcons.Circle;
+            const pillarColor = getPillarColor(tech.category);
+            
             return (
               <div
                 key={tech.category}
-                className={`group relative bg-[#121212] border border-white/10 hover:border-[#00FFD1]/50 p-8 transition-all duration-500 transform ${
+                className={`group relative bg-[#121212] border border-white/10 hover:border-white/30 p-8 transition-all duration-500 transform ${
                   isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Icon */}
-                <div className="w-14 h-14 bg-[#00FFD1]/10 flex items-center justify-center mb-6 group-hover:bg-[#00FFD1] transition-colors duration-300">
-                  <IconComponent className="w-7 h-7 text-[#00FFD1] group-hover:text-black transition-colors duration-300" />
+                <div 
+                  className="w-14 h-14 flex items-center justify-center mb-6 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: `color-mix(in srgb, ${pillarColor} 10%, transparent)`,
+                    border: `1px solid color-mix(in srgb, ${pillarColor} 30%, transparent)`
+                  }}
+                >
+                  <IconComponent 
+                    className="w-7 h-7 transition-colors duration-300" 
+                    style={{ color: pillarColor }}
+                  />
                 </div>
 
                 {/* Category */}
-                <h3 className="font-pixel text-lg text-[#00FFD1] mb-4">
+                <h3 
+                  className="font-pixel text-lg mb-4"
+                  style={{ color: pillarColor }}
+                >
                   {tech.category}
                 </h3>
 
@@ -90,8 +115,18 @@ const TechStackSection = () => {
                 </p>
 
                 {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-[#00FFD1]/0 group-hover:border-[#00FFD1]/50 transition-colors duration-300" />
-                <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-[#00FFD1]/0 group-hover:border-[#00FFD1]/50 transition-colors duration-300" />
+                <div 
+                  className="absolute top-0 right-0 w-6 h-6 border-t border-r transition-colors duration-300"
+                  style={{ 
+                    borderColor: `color-mix(in srgb, ${pillarColor} 0%, transparent)`
+                  }}
+                />
+                <div 
+                  className="absolute bottom-0 left-0 w-6 h-6 border-b border-l transition-colors duration-300"
+                  style={{ 
+                    borderColor: `color-mix(in srgb, ${pillarColor} 0%, transparent)`
+                  }}
+                />
               </div>
             );
           })}

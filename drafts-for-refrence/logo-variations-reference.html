@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3Web4 Logo Variations - Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Cascadia Code', monospace;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 3rem;
+      font-size: 0.9rem;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-card {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo-v3-v4-container {
+      font-family:
+        "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      background: rgb(255 255 255 / 0.1);
+      border-radius: 2px;
+    }
+
+    .logo-title {
+      font-size: 0.85rem;
+      color: #00ffd1;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100px;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .logo-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+    }
+
+    .logo-link:hover .glow-effect {
+      opacity: 0.5;
+    }
+
+    .logo-link:hover .logo-box {
+      box-shadow: 0 0 20px rgba(0, 255, 209, 0.5);
+    }
+
+    .glow-effect {
+      position: absolute;
+      inset: 0;
+      filter: blur(12px);
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    .logo-box {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 300ms;
+    }
+
+    .logo-text {
+      font-size: 0.875rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Logo Variation 1: Cyan Solid with Black Stroke & Scaled W */
+    .logo-v1-cyan-solid .logo-box {
+      background: #00ffd1;
+      font-family: 'Cascadia Code', monospace;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      padding-left: 0.47em;
+      line-height: 1em;
+      font-size: 1.25rem;
+      -webkit-text-stroke: 0.06em black;
+      color: black;
+      paint-order: stroke fill;
+      font-synthesis: weight;
+    }
+
+    .logo-v1-cyan-solid .glow-effect {
+      background: #fff;
+    }
+
+    .logo-v1-cyan-solid .wide-w {
+      display: inline-block;
+      transform: scaleX(1.5);
+      -webkit-text-stroke: 0em black !important;
+      letter-spacing: 0.25em;
+    }
+
+    /* Logo Variation 2: White Background with Gradient & Scaled W */
+    .logo-v2-gradient-stroke .logo-box {
+      background: #fff;
+      font-family: 'Cascadia Code', monospace;
+      color: black;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      padding-left: 0.47em;
+      line-height: 1em;
+      font-size: 1.25rem;
+      -webkit-text-stroke: 0.06em black;
+      paint-order: stroke fill;
+      font-synthesis: weight;
+      background: linear-gradient(-180deg, rgb(0, 255, 209) 0%, rgb(255, 255, 255) 50%, rgb(255, 92, 255) 100%);
+    }
+
+    .logo-v2-gradient-stroke .glow-effect {
+      background: #fff;
+    }
+
+    .logo-v2-gradient-stroke .wide-w {
+      display: inline-block;
+      transform: scaleX(1.5);
+      -webkit-text-stroke: 0.0em black !important;
+      letter-spacing: 0.15em;
+    }
+
+    /* Logo Variation 3: Gradient Text with Letter Spacing */
+    .logo-v3-gradient-text .logo-box {
+      font-family: 'Cascadia Code', monospace;
+      background: linear-gradient(-180deg, rgb(0, 255, 209) 0%, rgb(255, 255, 255) 50%, rgb(255, 92, 255) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      padding-left: 0.3em;
+      line-height: 1em;
+      font-size: 1.25rem;
+      -webkit-text-stroke: 0.03em transparent;
+      paint-order: stroke fill;
+      font-synthesis: weight;
+      border: none;
+      outline: none;
+    }
+
+    .logo-v3-gradient-text .wide-w {
+      letter-spacing: 0.3em;
+    }
+
+    /* Logo Variation 4: Two-Tone (Cyan/Purple) */
+    .logo-v4-two-tone .logo-box {
+      font-family: 'Cascadia Code', monospace;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      padding-left: 0.25em;
+      line-height: 1em;
+      font-size: 1.3rem;
+      paint-order: stroke fill;
+      font-synthesis: weight;
+      border: none;
+      outline: none;
+    }
+
+    .logo-v4-two-tone .web3 {
+      color: rgb(0, 255, 209);
+      -webkit-text-stroke: 0.01em rgb(0, 255, 209);
+    }
+
+    .logo-v4-two-tone .web4 {
+      color: rgb(255, 92, 255);
+      -webkit-text-stroke: 0.01em rgb(255, 92, 255);
+    }
+
+    .description {
+      color: #888;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .tech-specs {
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      background: #0a0a0a;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: #666;
+      text-align: left;
+      font-family: monospace;
+    }
+
+    .tech-specs div {
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Web3Web4 Logo Variations</h1>
+    <p class="subtitle">Reference for all logo design iterations</p>
+
+    <div class="logo-grid">
+      <!-- Variation 1: Cyan Solid with Scaled W -->
+      <div class="logo-card">
+        <div class="logo-title">V1: Cyan Solid + Scaled W</div>
+        <div class="logo-wrapper">
+          <a href="#" class="logo-link logo-v1-cyan-solid">
+            <div style="position: relative;">
+              <div class="glow-effect"></div>
+              <div class="logo-box">
+                <span><span class="wide-w">W</span>3</span>
+                <span><span class="wide-w">W</span>4</span>
+              </div>
+            </div>
+            <span class="logo-text">Web3Web4</span>
+          </a>
+        </div>
+        <div class="description">
+          Cyan solid background with black text stroke. W characters scaled 1.5x horizontally using transform scaleX.
+        </div>
+        <div class="tech-specs">
+          <div>• Background: #00ffd1</div>
+          <div>• Stroke: 0.06em black</div>
+          <div>• W Scale: scaleX(1.5)</div>
+          <div>• Letter Spacing: 0.24em</div>
+        </div>
+      </div>
+
+      <!-- Variation 2: White Background with Gradient -->
+      <div class="logo-card">
+        <div class="logo-title">V2: Gradient Background + Scaled W</div>
+        <div class="logo-wrapper">
+          <a href="#" class="logo-link logo-v2-gradient-stroke">
+            <div style="position: relative;">
+              <div class="glow-effect"></div>
+              <div class="logo-box">
+                <span><span class="wide-w">W</span>3</span>
+                <span><span class="wide-w">W</span>4</span>
+              </div>
+            </div>
+            <span class="logo-text">Web3Web4</span>
+          </a>
+        </div>
+        <div class="description">
+          White background with gradient overlay. Black text with stroke. W characters scaled 1.5x.
+        </div>
+        <div class="tech-specs">
+          <div>• Background: gradient (cyan→white→purple)</div>
+          <div>• Stroke: 0.06em black</div>
+          <div>• W Scale: scaleX(1.5)</div>
+          <div>• Base Color: black</div>
+        </div>
+      </div>
+
+      <!-- Variation 3: Gradient Text -->
+      <div class="logo-card">
+        <div class="logo-title">V3: Full Gradient Text</div>
+        <div class="logo-wrapper">
+          <a href="#" class="logo-link logo-v3-gradient-text">
+            <div style="position: relative;" class="logo-v3-v4-container">
+              <div class="glow-effect"></div>
+              <div class="logo-box">
+                <span><span class="wide-w">W</span>3</span>
+                <span><span class="wide-w">W</span>4</span>
+              </div>
+            </div>
+            <span class="logo-text">Web3Web4</span>
+          </a>
+        </div>
+        <div class="description">
+          Gradient clipped to text using background-clip. Transparent fill with extra letter spacing on W.
+        </div>
+        <div class="tech-specs">
+          <div>• Text Fill: transparent (gradient)</div>
+          <div>• Gradient: cyan→white→purple</div>
+          <div>• W Letter Spacing: 0.3em</div>
+          <div>• Overall Spacing: 0.24em</div>
+        </div>
+      </div>
+
+      <!-- Variation 4: Two-Tone -->
+      <div class="logo-card">
+        <div class="logo-title">V4: Two-Tone (Cyan/Purple)</div>
+        <div class="logo-wrapper">
+          <a href="#" class="logo-link logo-v4-two-tone">
+            <div style="position: relative;" class="logo-v3-v4-container">
+              <div class="glow-effect"></div>
+              <div class="logo-box">
+                <span class="web3"><span class="wide-w">W</span>3</span>
+                <span class="web4"><span class="wide-w">W</span>4</span>
+              </div>
+            </div>
+            <span class="logo-text">Web3Web4</span>
+          </a>
+        </div>
+        <div class="description">
+          Distinct colors for Web3 (cyan) and Web4 (purple). Each line has its own color with thin stroke.
+        </div>
+        <div class="tech-specs">
+          <div>• Web3 Color: rgb(0, 255, 209)</div>
+          <div>• Web4 Color: rgb(255, 92, 255)</div>
+          <div>• Stroke: 0.01em per color</div>
+          <div>• Font Size: 1.3rem (larger)</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; color: #666; font-size: 0.8rem;">
+      <p>All variations use Cascadia Code font at 900 weight</p>
+      <p style="margin-top: 0.5rem;">Created: January 2026</p>
+    </div>
+  </div>
+</body>
+</html>

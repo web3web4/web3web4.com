@@ -35,7 +35,7 @@ const ApproachSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-white/5 border border-white/20 text-white text-sm font-medium mb-6">
             PHILOSOPHY
           </span>
           <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white">
@@ -56,19 +56,19 @@ const ApproachSection = () => {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 {/* Glowing Border on Hover */}
-                <div className="absolute inset-0 border border-white/10 group-hover:border-[#00FFD1]/30 group-hover:shadow-[0_0_30px_rgba(0,255,209,0.1)] transition-all duration-500" />
+                <div className="absolute inset-0 border border-white/10 group-hover:border-white/30 group-hover:shadow-[0_0_30px_rgba(0,255,209,0.1)] transition-all duration-500" />
 
                 {/* Icon */}
                 <div className="relative w-20 h-20 mx-auto mb-6">
-                  <div className="absolute inset-0 bg-[#00FFD1]/5 group-hover:bg-[#00FFD1]/10 transition-colors duration-300" />
-                  <div className="absolute inset-2 bg-[#00FFD1]/10 group-hover:bg-[#00FFD1]/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
+                  <div className="absolute inset-2 bg-white/10 group-hover:bg-white/20 transition-colors duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <IconComponent className="w-10 h-10 text-[#00FFD1]" />
+                    <IconComponent className="w-10 h-10 text-white" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="font-pixel text-xl text-white mb-4 group-hover:text-[#00FFD1] transition-colors duration-300">
+                <h3 className="font-pixel text-xl text-white mb-4 group-hover:text-white transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-white/60 leading-relaxed">

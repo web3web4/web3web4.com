@@ -16,22 +16,22 @@ const ProjectLink = ({ name, url }) => {
     >
       {/* Background container */}
       <div className={`relative flex items-center gap-3 px-4 py-3 transition-all duration-300 ${
-        isHovered ? 'bg-[#00FFD1]/10 translate-x-2' : 'bg-transparent'
+        isHovered ? 'bg-white/10 translate-x-2' : 'bg-transparent'
       }`}>
         {/* Left accent bar */}
-        <div className={`absolute left-0 top-0 bottom-0 w-1 bg-[#00FFD1] transition-all duration-300 ${
+        <div className={`absolute left-0 top-0 bottom-0 w-1 bg-white transition-all duration-300 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`} />
         
         {/* Folder icon with open/close animation */}
         <div className="relative w-6 h-6">
           <Folder 
-            className={`absolute inset-0 w-6 h-6 text-[#00FFD1] transition-all duration-300 ${
+            className={`absolute inset-0 w-6 h-6 text-white transition-all duration-300 ${
               isHovered ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
             }`} 
           />
           <FolderOpen 
-            className={`absolute inset-0 w-6 h-6 text-[#00FFD1] transition-all duration-300 ${
+            className={`absolute inset-0 w-6 h-6 text-white transition-all duration-300 ${
               isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
             }`} 
           />
@@ -39,7 +39,7 @@ const ProjectLink = ({ name, url }) => {
 
         {/* Project name */}
         <span className={`font-mono transition-all duration-300 ${
-          isHovered ? 'text-[#00FFD1]' : 'text-[#00FFD1]/80'
+          isHovered ? 'text-white' : 'text-white/80'
         }`}>
           {name}/
         </span>
@@ -49,12 +49,12 @@ const ProjectLink = ({ name, url }) => {
           isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
         }`}>
           <span className="text-white/40 text-xs">View repo</span>
-          <ExternalLink className="w-4 h-4 text-[#00FFD1]" />
+          <ExternalLink className="w-4 h-4 text-white" />
         </div>
       </div>
 
       {/* Bottom highlight line */}
-      <div className={`h-[1px] bg-gradient-to-r from-[#00FFD1] to-transparent transition-all duration-300 ${
+      <div className={`h-[1px] bg-gradient-to-r from-white to-transparent transition-all duration-300 ${
         isHovered ? 'opacity-100 w-full' : 'opacity-0 w-0'
       }`} />
     </a>
@@ -90,8 +90,8 @@ const ProjectsSection = () => {
     >
       {/* Decorative Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00FFD1]/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00FFD1]/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -102,7 +102,7 @@ const ProjectsSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
-            <span className="inline-block px-4 py-2 bg-[#00FFD1]/10 border border-[#00FFD1]/30 text-[#00FFD1] text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-white/10 border border-white/30 text-white text-sm font-medium mb-6">
               OPEN SOURCE
             </span>
             <h2 className="font-pixel text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
               community-driven development. Contributions and feedback are welcome!
             </p>
             <Button
-              className="bg-[#00FFD1] text-black hover:bg-[#00FFD1]/10 hover:text-[#00FFD1] px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
+              className="bg-white text-black hover:bg-white/10 hover:text-white px-8 py-6 rounded-none text-lg font-medium transition-all duration-400 group"
               asChild
             >
               <a
@@ -158,14 +158,14 @@ const ProjectsSection = () => {
                   <div className="mt-6 pt-5 border-t border-white/10">
                     <span className="text-white/40">$</span>
                     <span className="text-white ml-2">git clone https://github.com/web3web4/tacosec-frontend.git</span>
-                    <span className="animate-pulse text-[#00FFD1] ml-1">|</span>
+                    <span className="animate-pulse text-white ml-1">|</span>
                   </div>
                 </div>
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-[#00FFD1]" />
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-[#00FFD1]" />
+              <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-white" />
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-white" />
             </div>
           </div>
         </div>

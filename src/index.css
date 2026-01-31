@@ -6,23 +6,43 @@
 .font-pixel {
   /* font-family: 'Press Start 2P', cursive; */
   /* Experimenting with the coding font. TODO: if selecttion was finalized update the css class name */
-  font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family:
+    "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   font-weight: bold;
 }
 
+/* Logo Component Styles */
+.logo-container {
+  font-family:
+    "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background: rgb(255 255 255 / 0.1);
+  border-radius: 2px;
+}
+
 .font-logo {
-  font-family: 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  color: black;
   font-weight: 900;
-  letter-spacing: 0.24em;
-  padding-left: 0.47em;
+  letter-spacing: 0.35em;
+  padding-left: 0.50em;
   line-height: 1em;
-  font-size: 1.25rem;
-  -webkit-text-stroke: 0.060em black;
+  font-size: 1.2rem;
   paint-order: stroke fill;
   font-synthesis: weight;
 }
 
+/* Brand Color Classes */
+.web3 {
+  color: rgb(0, 255, 209); /* #00FFD1 */
+  -webkit-text-stroke: 0.015em rgb(0, 255, 209);
+}
+
+.web4 {
+  color: rgb(255, 117, 255); /* #FF75FF - matches --web4-purple */
+  -webkit-text-stroke: 0.015em rgb(255, 117, 255);
+}
+
+/* Horizontal character scaling for "W" - preserves gradient continuity */
 .wide-w {
   display: inline-block;
   transform: scaleX(1.5);
@@ -30,13 +50,29 @@
 }
 
 .font-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
@@ -44,12 +80,14 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /* Custom Animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
     opacity: 0.3;
   }
@@ -96,7 +134,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00FFD1;
+  background: #FFFFFF;
   border-radius: 0;
 }
 
@@ -106,17 +144,23 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6FD2C0;
+  background: #CCCCCC;
 }
 
 /* Selection Color */
 ::selection {
-  background: #00FFD1;
+  background: #FFFFFF;
   color: #000000;
 }
 
 @layer base {
   :root {
+    /* Web3Web4 Official Brand Colors */
+    --web3-cyan: #00ffd1;
+    --web4-purple: #FF75FF;
+    --brand-black: #000000;
+    --brand-white: #ffffff;
+
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --card: 0 0% 7%;
