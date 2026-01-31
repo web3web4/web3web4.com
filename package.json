@@ -63,7 +63,10 @@
     "build": "craco build",
     "test": "craco test",
     "predeploy": "pnpm build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "optimize-images": "./scripts/optimize-images.sh",
+    "optimize-images:public": "./scripts/optimize-images.sh public/",
+    "optimize-images:drafts": "./scripts/optimize-images.sh drafts-for-refrence/"
   },
   "browserslist": {
     "production": [
