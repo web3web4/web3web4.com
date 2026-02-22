@@ -149,7 +149,11 @@ const ProjectsSection = () => {
                 {/* Code Content */}
                 <div className="p-6 font-mono text-sm">
                   <ProjectLink 
-                    name="tacosec-frontend" 
+                    name="AnalyzicAI" 
+                    url="https://github.com/web3web4/analyzicai" 
+                  />
+                  <ProjectLink 
+                    name="TACoSec" 
                     url="https://github.com/web3web4/tacosec-frontend" 
                   />
                   <div className="mt-4 text-white/40 text-sm italic">
@@ -157,7 +161,7 @@ const ProjectsSection = () => {
                   </div>
                   <div className="mt-6 pt-5 border-t border-white/10">
                     <span className="text-white/40">$</span>
-                    <span className="text-white ml-2">git clone https://github.com/web3web4/tacosec-frontend.git</span>
+                    <span className="text-white ml-2">git clone https://github.com/web3web4/analyzicai.git</span>
                     <span className="animate-pulse text-white ml-1">|</span>
                   </div>
                 </div>
